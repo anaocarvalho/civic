@@ -1,0 +1,15 @@
+{
+  "name": "votehub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VoteHub: enter an address, get your polling place, sample ballot, election dates and districts. Static site + Netlify Functions proxying the Google Civic Information API v2.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "check": "for f in netlify/functions/*.mjs public/js/*.js scripts/*.mjs; do node --check $f || exit 1; done",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
